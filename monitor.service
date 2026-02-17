@@ -1,0 +1,14 @@
+[Unit]
+Description=AccBlox Product Monitor
+After=network.target
+
+[Service]
+Type=simple
+User=YOUR_USERNAME
+WorkingDirectory=/home/YOUR_USERNAME/accblox-monitor
+ExecStart=/home/YOUR_USERNAME/accblox-monitor/venv/bin/python monitor.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
